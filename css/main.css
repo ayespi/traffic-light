@@ -1,3 +1,32 @@
+#wrapper{
+    border:1px solid #000000;
+    width:200px;
+    margin:15px auto;
+    /*background-color: #000000;*/
+}
+.light{
+    display:block;
+    width:150px;
+    height:150px;
+    border:1px solid #333333;
+    margin:8px auto;
+    border-radius:50%;
+}
+#green-light{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+}
+#yellow-light{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+}
+#red-light{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+}
 .green{
     background-color: green;
 }
@@ -6,4 +35,7 @@
 }
 .red{
     background-color: red;
+}
+.black{
+    background-color: black;
 }

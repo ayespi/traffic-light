@@ -2,38 +2,24 @@
 <html>
 <head>
     <title>Traffic Light</title>
-    <script>
-        function TrafficLight()
-        {
-            this.red = new Light("Red", 3500);
-            this.yellow = new Light("Yellow", 1500);
-            this.green = new Light("Green", 5000);
-            this.start = function(){
-                setTimeout(function(){this.green.on();},100);
-                setTimeout(function(){this.yellow.on();},100);
-                setTimeout(function(){this.red.on();},100);
-            };
-        }
-        function Light(color, time)
-        {
-            this.color  = color;
-            this.time   = time;
-        }
-        Light.prototype.on = function(){
-            var currentColor    =  this.color;
-            var lightInterval   =  this.time;
-            setInterval(function(){
-                console.log('The '+currentColor+' Light is on...');
-            },lightInterval);
-            
-            console.log(currentColor);
-        };
-
-    </script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/functlib.js"></script>
+    <script src="js/Light.js"></script>
+    <script src="js/app.js"></script>
 </head>
 <body>
-    <div>
-
-    </div>
+    <!--<div id="wrapper">-->
+        <div class="light" >
+            <div class="bulb" id="red-light"></div>
+        </div>
+        <div class="light">
+            <div class="bulb" id="yellow-light"></div>
+        </div>
+        <div class="light">
+            <div class="bulb" id="green-light"></div>
+        </div>
+    <!--</div>-->
+    <button onclick="activateGreen()">Activate</button>
+    <script></script>
 </body>
 </html>

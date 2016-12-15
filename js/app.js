@@ -1,0 +1,1 @@
+var currentColor, lightInterval, lightColor;
