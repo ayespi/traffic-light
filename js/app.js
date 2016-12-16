@@ -1,1 +1,1 @@
-var currentColor, lightInterval, lightColor, activateLight;
+var currentColor, lightInterval, lightColor, activateLight, cycle, loops = 0;

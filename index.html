@@ -20,7 +20,18 @@
             <div class="bulb" id="green-light"></div>
         </div>
     </div>
-    <button onclick="activateGreen()">Activate</button>
-    <script></script>
+    <button onclick="activate()">Start</button>
+    <button onclick="deactivate()">Stop</button>
+    <script>
+        function activate(){
+            console.log('Traffic Signal Activated...');
+            var tl = new TrafficLight();
+            tl.start();
+        }
+        function deactivate(){
+            console.log('Traffic Signal Deactivated...');
+            clearInterval(cycle);
+        }
+    </script>
 </body>
 </html>
