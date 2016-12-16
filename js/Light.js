@@ -3,37 +3,54 @@ function Light(color, time)
     this.color  = color;
     this.time   = time;
 }
+
 Light.prototype.on  = function(){
-    currentColor    = this.color;
-    lightInterval   = this.time;
-    var bulbArray   = document.getElementsByClassName("bulb");
-    console.log(bulbArray);
-    console.log('==================');
-    switch(currentColor) 
-    {
-        case "red":
-            var yellow  = document.getElementById("yellow-light");
-            var green   = document.getElementById("green-light");
-            yellow.className    = "none";
-            green.className     = "none";
-            break;
-        case "yellow":
-            var red     = document.getElementById("red-light");
-            var green   = document.getElementById("green-light");
-            red.className       = "none";
-            green.className     = "none";
-            break;
-        default:
-            var yellow  = document.getElementById("yellow-light");
-            var red     = document.getElementById("red-light");
-            yellow.className    = "none";
-            red.className       = "none";
-    }
-    console.log('The '+currentColor+' light has been activated...');
-    setInterval(function(){
-        var element = currentColor+"-light";
-        lightColor  = document.getElementById(element);
-        lightColor.className = currentColor;  
-        console.log(lightColor);
-    },lightInterval);
+    element     = this.color+'-light';
+    lightColor  = document.getElementById(element);
+    lightColor.classList.add(this.color);
 };
+
+Light.prototype.off  = function(){
+    element     = this.color+'-light';
+    lightColor  = document.getElementById(element);
+    lightColor.classList.remove(this.color);
+};
+
+
+// Light.prototype.on  = function(){
+//     clearInterval(activateLight);
+//     currentColor    = this.color;
+//     lightInterval   = this.time;
+//     var bulbArray   = document.getElementsByClassName("bulb");
+//     console.log(bulbArray);
+//     console.log('==================');
+//     turnOffAllLights(currentColor);
+//     console.log('The '+currentColor+' light has been activated...');
+//     activateLight = setInterval(function(){
+//         var element = currentColor+"-light";
+//         // console.log('The name of the element is: '+element);
+//         lightColor  = document.getElementById(element);
+//         //  console.log('The light color is: '+lightColor);
+//         lightColor.className = currentColor;  
+//         // console.log(lightColor);
+//     },lightInterval);
+// };
+
+// Light.prototype.on  = function(){
+//     clearInterval(activateLight);
+//     currentColor    = this.color;
+//     lightInterval   = this.time;
+//     var bulbArray   = document.getElementsByClassName("bulb");
+//     console.log(bulbArray);
+//     console.log('==================');
+//     turnOffAllLights(currentColor);
+//     console.log('The '+currentColor+' light has been activated...');
+//     activateLight = setInterval(function(){
+//         var element = currentColor+"-light";
+//         // console.log('The name of the element is: '+element);
+//         lightColor  = document.getElementById(element);
+//         //  console.log('The light color is: '+lightColor);
+//         lightColor.className = currentColor;  
+//         // console.log(lightColor);
+//     },lightInterval);
+// };

@@ -1,1 +1,1 @@
-var currentColor, lightInterval, lightColor;
+var currentColor, lightInterval, lightColor, activateLight;

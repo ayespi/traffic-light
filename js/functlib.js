@@ -1,10 +1,24 @@
-function turnOffAllLights(bulbArray)
+function turnOffAllLights(currentColor)
 {
-        i = bulbArray.length;
-
-    while(i--) 
+    switch(currentColor) 
     {
-        bulbArray[i].style.backgroundColor = "w";
+        case "red":
+            var yellow  = document.getElementById("yellow-light");
+            var green   = document.getElementById("green-light");
+            yellow.className    = "none";
+            green.className     = "none";
+            break;
+        case "yellow":
+            var red     = document.getElementById("red-light");
+            var green   = document.getElementById("green-light");
+            red.className       = "none";
+            green.className     = "none";
+            break;
+        default:
+            var yellow  = document.getElementById("yellow-light");
+            var red     = document.getElementById("red-light");
+            yellow.className    = "none";
+            red.className       = "none";
     }
 }
 
