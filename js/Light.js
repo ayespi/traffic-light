@@ -8,12 +8,14 @@ Light.prototype.on  = function(){
     element     = this.color+'-light';
     lightColor  = document.getElementById(element);
     lightColor.classList.add(this.color);
+    console.log('The '+this.color+' light is ON...');
 };
 
 Light.prototype.off  = function(){
     element     = this.color+'-light';
     lightColor  = document.getElementById(element);
     lightColor.classList.remove(this.color);
+    console.log('The '+this.color+' light is OFF...');
 };
 
 

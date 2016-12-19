@@ -19,13 +19,12 @@
         <div class="light">
             <div class="bulb" id="green-light"></div>
         </div>
-    </div>
-    <button onclick="activate()">Start</button>
-    <button onclick="deactivate()">Stop</button>
+    </div><button onclick="activate()">Start</button> | <button onclick="deactivate()">Stop</button>
+
     <script>
         function activate(){
             console.log('Traffic Signal Activated...');
-            var tl = new TrafficLight();
+            tl = new TrafficLight();
             tl.start();
         }
         function deactivate(){
