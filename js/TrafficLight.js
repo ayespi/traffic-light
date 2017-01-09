@@ -44,19 +44,19 @@ TrafficLight.prototype.start = function(){
         setTimeout(function(){
             greenLight.classList.remove("green");
             yellowLight.classList.add("yellow");
-        },6000);
+        },2400);
         setTimeout(function(){
             yellowLight.classList.remove("yellow");
             redLight.classList.add("red");
-        },9000);      
+        },3600);      
         setTimeout(function(){
             redLight.classList.remove("red");
             greenLight.classList.add("green");
-        },14000); 
+        },5600); 
         loops = loops+1;
         console.log('Cycle '+loops+' Started...');
-    }, 14000);
+    }, 5600);
 };
 TrafficLight.prototype.stop = function(){
-    clearInterval(cycle);  
+    clearInterval(cycle); 
 };

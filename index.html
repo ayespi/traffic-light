@@ -23,6 +23,8 @@
 
     <script>
         function activate(){
+            loops = 0;
+            clearInterval(cycle);
             console.log('Traffic Signal Activated...');
             tl = new TrafficLight();
             tl.start();
